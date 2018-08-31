@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="eMedics">
+
+  <title>eMedics - Your personal medical assistant</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+  <section>
+    <h1>eMedics</h1>
+    <h2>Your personal medical assistant</h2>
+
+    <button>
+      <i class="fa fa-microphone"></i>
+    </button>
+
+    <div>      
+        <p>Dr.eMedics: I'll help you understand any symptoms you may be concerned about.</p>
+        <p>Can you please tell me the symptom?</p>
+        <p>1. Head
+           2. Chest
+           3. Stomach
+        </p>
+      <p>User:
+        <em class="output-you">...</em>
+      </p>
+      <p>Dr.eMedics:
+        <em class="output-bot">...</em>
+      </p>
+    </div>
+  </section>
+
+  <script src="socket.io/socket.io.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

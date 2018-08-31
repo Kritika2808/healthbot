@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="ई-मेडिक्">
+
+  <title>ई-मेडिक्स - आपका व्यक्तिगत चिकित्सा सहायक</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+  <div class="page-container">
+  <!-- <section> -->
+    <div class="header-container">
+      <h1>ई-मेडिक्स</h1>
+      <h2>आपका व्यक्तिगत चिकित्सा सहायक</h2>
+    </div>
+
+    <!-- <button>
+      <i class="fa fa-microphone"></i>
+    </button> -->
+
+    <div class="chat-container"> 
+      <div class="chat-block first">
+        <div class="chat-block-item large">
+            <div class="user-heading">
+                डॉ ई-मेडिक्स
+            </div>
+            <div class="chat-message">
+              <div class="icon-container">
+                <img class="icon" src="../images/doc.svg">
+              </div>
+              <div class="message-block doc">
+                मैं आपको उन लक्षणों को समझने में मदद करूंगा जिनके बारे में आप चिंतित हो सकते हैं। क्या आप मुझे लक्षण बता सकते हैं? 1. सिर 2. छाती 3. पेट
+              </div>
+            </div>
+        </div>
+        <div class="chat-block-item small"></div>
+      </div>
+      <div class="chat-block">
+          <div class="chat-block-item large"></div> 
+          <div class="chat-block-item small">
+              <div class="user-heading">
+                उपयोगकर्ता
+              </div>
+              <div class="chat-message">
+                <div class="icon-container">
+                  <img class="icon" src="../images/user.svg">
+                </div>
+                <div class="message-block user">
+                  सिर
+                </div>
+              </div>
+          </div>
+        </div> 
+        
+        <!-- <p>डॉ ई-मेडिक्स: मैं आपको उन लक्षणों को समझने में मदद करूंगा जिनके बारे में आप चिंतित हो सकते हैं।</p> -->
+        <!-- <p>क्या आप मुझे लक्षण बता सकते हैं?</p>
+        <p>1. सिर
+           2. छाती
+           3. पेट
+        </p> -->
+      <!-- <p>उपयोगकर्ता:
+        <em class="output-you">...</em>
+      </p>
+      <p>डॉ ई-मेडिक्स:
+        <em class="output-bot">...</em>
+      </p> -->
+    </div>
+  <!-- </section> -->
+  </div>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
