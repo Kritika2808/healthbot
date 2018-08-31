@@ -44,7 +44,7 @@ recognition.addEventListener('result', (e) => {
   // Structure of html is this -
   // <div class="chat-block first">
   //   <div class="chat-block-item large">
-  //       <div class="user-heading">
+  //       <div class="user-heading first">
   //           डॉ ई-मेडिक्स
   //       </div>
   //       <div class="chat-message">
@@ -59,7 +59,7 @@ recognition.addEventListener('result', (e) => {
   //   <div class="chat-block-item small"></div>
   // </div>
 
-  var fragment = create('<div class="chat-block first"><div class="chat-block-item large"><div class="user-heading">डॉ ई-मेडिक्स</div><div class="chat-message"><div class="icon-container"><img class="icon" src="../images/heart.svg"></div><div class="message-block doc">' + text + '</div></div></div><div class="chat-block-item small"></div></div>');
+  var fragment = create('<div class="chat-block first"><div class="chat-block-item large"><div class="user-heading first">डॉ ई-मेडिक्स</div><div class="chat-message"><div class="icon-container"><img class="icon" src="../images/heart.svg"></div><div class="message-block doc">' + text + '</div></div></div><div class="chat-block-item small"></div></div>');
   chatContainer.appendChild(fragment);
 
   socket.emit('chat message', text);

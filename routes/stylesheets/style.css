@@ -40,6 +40,10 @@ body {
   text-align: right;
 }
 
+.user-heading.first{
+  text-align: left;
+}
+
 .chat-message {
   display: flex;
   flex-direction: row;
