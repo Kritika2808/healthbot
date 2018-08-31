@@ -39,10 +39,27 @@ recognition.addEventListener('result', (e) => {
   let last = e.results.length - 1;
   let text = e.results[last][0].transcript;
     
-  // outputYou.textContent = text;
   console.log('Confidence: ' + e.results[0][0].confidence);
 
-  var fragment = create('<p>उपयोगकर्ता: <em class="output-you">' + text + '</em></p>')
+  // Structure of html is this -
+  // <div class="chat-block first">
+  //   <div class="chat-block-item large">
+  //       <div class="user-heading">
+  //           डॉ ई-मेडिक्स
+  //       </div>
+  //       <div class="chat-message">
+  //         <div class="icon-container">
+  //           <img class="icon" src="../images/heart.svg">
+  //         </div>
+  //         <div class="message-block doc">
+  //           {{text}}
+  //         </div>
+  //       </div>
+  //   </div>
+  //   <div class="chat-block-item small"></div>
+  // </div>
+
+  var fragment = create('<div class="chat-block first"><div class="chat-block-item large"><div class="user-heading">डॉ ई-मेडिक्स</div><div class="chat-message"><div class="icon-container"><img class="icon" src="../images/heart.svg"></div><div class="message-block doc">' + text + '</div></div></div><div class="chat-block-item small"></div></div>');
   chatContainer.appendChild(fragment);
 
   socket.emit('chat message', text);
@@ -75,8 +92,25 @@ socket.on('bot reply', function (replyText) {
   synthVoice(replyText);
 
   if (replyText == '') replyText = '(No answer...)';
-  // outputBot.textContent = replyText;
 
-  var fragment = create('<p>डॉ ई-मेडिक्स: <em class="output-bot">' + replyText + '</em></p>')
+  // Structure of html is this -
+  // <div class="chat-block">
+  //   <div class="chat-block-item large"></div> 
+  //   <div class="chat-block-item small">
+  //       <div class="user-heading">
+  //         उपयोगकर्ता
+  //       </div>
+  //       <div class="chat-message user">
+  //         <div class="icon-container">
+  //           <img class="icon" src="../images/user.svg">
+  //         </div>
+  //         <div class="message-block user">
+  //           सिर
+  //         </div>
+  //       </div>
+  //   </div>
+  // </div>
+
+  var fragment = create('<div class="chat-block"><div class="chat-block-item large"></div><div class="chat-block-item small"><div class="user-heading">उपयोगकर्ता</div><div class="chat-message user"><div class="icon-container"><img class="icon" src="../images/user.svg"></div><div class="message-block user">' + replyText + '</div></div></div></div>')
   chatContainer.appendChild(fragment);
 });
