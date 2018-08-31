@@ -17,8 +17,8 @@
   <div class="page-container">
   <!-- <section> -->
     <div class="header-container">
-      <h1>ई-मेडिक्स</h1>
-      <h2>आपका व्यक्तिगत चिकित्सा सहायक</h2>
+      <h1 class="first-heading">ई-मेडिक्स</h1>
+      <h2 class="second-heading">आपका व्यक्तिगत चिकित्सा सहायक</h2>
     </div>
 
     <!-- <button>
@@ -33,7 +33,7 @@
             </div>
             <div class="chat-message">
               <div class="icon-container">
-                <img class="icon" src="../images/doc.svg">
+                <img class="icon" src="../images/heart.svg">
               </div>
               <div class="message-block doc">
                 मैं आपको उन लक्षणों को समझने में मदद करूंगा जिनके बारे में आप चिंतित हो सकते हैं। क्या आप मुझे लक्षण बता सकते हैं? 1. सिर 2. छाती 3. पेट
@@ -48,31 +48,29 @@
               <div class="user-heading">
                 उपयोगकर्ता
               </div>
-              <div class="chat-message">
+              <div class="chat-message user">
                 <div class="icon-container">
                   <img class="icon" src="../images/user.svg">
                 </div>
                 <div class="message-block user">
                   सिर
                 </div>
+                <!-- <div class="button-container">
+                  <button class="click-microphone">
+                    <i class="fa fa-microphone"></i>
+                  </button>
+                </div> -->
               </div>
           </div>
-        </div> 
-        
-        <!-- <p>डॉ ई-मेडिक्स: मैं आपको उन लक्षणों को समझने में मदद करूंगा जिनके बारे में आप चिंतित हो सकते हैं।</p> -->
-        <!-- <p>क्या आप मुझे लक्षण बता सकते हैं?</p>
-        <p>1. सिर
-           2. छाती
-           3. पेट
-        </p> -->
-      <!-- <p>उपयोगकर्ता:
-        <em class="output-you">...</em>
-      </p>
-      <p>डॉ ई-मेडिक्स:
-        <em class="output-bot">...</em>
-      </p> -->
+        </div>
     </div>
-  <!-- </section> -->
+
+    <div class="button-container">
+      <button class="click-microphone">
+        <i class="fa fa-microphone"></i>
+      </button>
+    </div>
+
   </div>
   <script src="socket.io/socket.io.js"></script>
   <script src="js/script.js"></script>

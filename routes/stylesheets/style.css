@@ -37,12 +37,19 @@ body {
 .user-heading {
   color: #7b7878;
   margin-bottom: 3px;
+  text-align: right;
 }
 
 .chat-message {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+
+.chat-message.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 /* .chat-message-item {
@@ -99,14 +106,20 @@ body {
 
 .icon-container {
   margin-right: 7px;
-  /* display: inline-block;
-  margin-left: 5px;
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  border: 2px solid black;
-  margin:auto;
-  border:2px dashed #0000FF; */
+}
+
+.button-container {
+  margin: auto;
+}
+
+.first-heading {
+  color: #39C2C9;
+  text-shadow: 2px 2px #888484;
+}
+
+.second-heading {
+  color: #615f5f;
+  text-shadow: 1px 1px #d4dcd4;
 }
 
 footer {
@@ -154,11 +167,11 @@ section {
 }
 
 button {
-  display: block;
+  /* display: block; */
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
   border: 0;
   border-radius: 50%;
   padding: .7em 1em;
@@ -169,11 +182,12 @@ button {
   box-shadow: 2px 5px 30px rgba(63, 200, 201, .4);
   will-change: transform, filter;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 button .fa {
-  font-size: 130px;
-  line-height: 200px;
+  font-size: 21px;
+  line-height: 38px;
   margin: 0;
   text-shadow: 1px 2px 2px #2a8b90;
 }
